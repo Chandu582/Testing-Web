@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Book Online Taxi Service (BookOTS) | Premium Cab Service in Bihar & Jharkhand</title>
+
+  <meta name="description"
+    content="BookOTS offers premium 24/7 cab services in Bihar and Jharkhand. One-way cabs, outstation drops, airport transfers. Sanitized cars, professional drivers. Book via WhatsApp now!">
+  <meta name="keywords"
+    content="taxi service Ranchi, cab booking Hatia, bookots, online taxi service bihar, online taxi service jharkhand, one way cab hazaribagh, book online taxi service">
+  <meta name="theme-color" content="#EAB308">
+
+  <!-- Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FontAwesome & Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Glowing background rings -->
+  <div class="glowing-gradient-bg" style="top: 10%; left: -5%;"></div>
+  <div class="glowing-gradient-bg" style="top: 40%; right: -5%;"></div>
+
+  <!-- Announcement Ticker -->
+  <div class="ticker-bar">
+    <div class="ticker-wrap">
+      <div class="ticker-content" id="announcementTicker">
+        <!-- Loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Glassmorphic Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-wrap">
+        <div class="logo-badge">BookOTS</div>
+        <div class="logo-text">Online Taxi</div>
+      </a>
+
+      <div class="nav-actions">
+        <!-- Language Switcher Button -->
+        <button id="langToggle" class="btn-outline" style="padding: 8px 18px;">
+          <i class="fas fa-language" style="margin-right: 6px;"></i><span id="langText">हिंदी</span>
+        </button>
+
+        <!-- Admin Console Secure Gate Shortcut -->
+        <a href="admin.html" class="btn-circle"
+          style="color: hsl(var(--color-gold-base)); border-color: rgba(234, 179, 8, 0.25); display: flex;"
+          title="Admin Secure Gate">
+          <i class="fas fa-user-shield"></i>
+        </a>
+
+        <!-- Quick Call Action -->
+        <a id="navCallBtn" href="tel:7352121002" class="btn-premium">
+          <i class="fas fa-phone-alt animate-pulse"></i>
+          <span data-translate="hero_subtitle" style="display:none;"></span>
+          <span class="lang-en">Call</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Area -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <!-- Left Hero content -->
+      <div class="hero-content">
+        <div class="hero-subtitle">
+          <i class="fas fa-award"></i>
+          <span data-translate="hero_subtitle">Bihar & Jharkhand's Premium Cab Network</span>
+        </div>
+
+        <h1 class="hero-title" data-translate="hero_title">
+          Elite <span>Taxi Service</span><br>For Comfort & Safety
+        </h1>
+
+        <p class="hero-description" data-translate="hero_desc">
+          Experience top-tier travel with verified professional drivers. One-way drops, round trips, and local
+          sightseeing across Bihar and Jharkhand with zero hidden charges.
+        </p>
+
+        <!-- Dynamic Counter Display -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num" id="statHappyRides">120k+</div>
+            <div class="stat-label" data-translate="stat_happy">Happy Rides</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" id="statRating"><i class="fas fa-star" style="font-size:16px;"></i> 4.8</div>
+            <div class="stat-label" data-translate="stat_rating">Google Rating</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" id="statDrivers">2100+</div>
+            <div class="stat-label" data-translate="stat_drivers">Clean Cars</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" id="statCities">38+</div>
+            <div class="stat-label" data-translate="stat_cities">Hubs</div>
+          </div>
+        </div>
+
+        <div class="hero-buttons" style="display: flex; gap: 15px;">
+          <a id="heroWaBtn" href="https://wa.me/917352121002" target="_blank" class="btn-premium btn-wa">
+            <i class="fab fa-whatsapp" style="font-size:18px;"></i>
+            <span data-translate="btn_wa">WhatsApp Booking</span>
+          </a>
+          <a href="#booking" class="btn-outline"
+            style="padding: 14px 28px; font-family: var(--font-display); font-weight:700;">
+            <span data-translate="btn_fare">Calculate Fare</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Hero Graphic -->
+      <div class="hero-graphic">
+        <div class="hero-img-container">
+          <img src="https://images.pexels.com/photos/385997/pexels-photo-385997.jpeg?auto=compress&cs=tinysrgb&w=800"
+            alt="BookOTS Premium Cabs">
+
+          <div class="floating-badge">
+            <div class="badge-icon"><i class="fas fa-shield-halved"></i></div>
+            <div class="badge-text">
+              <h4 data-translate="badge_fleet">100% Sanitized Fleet</h4>
+              <p data-translate="badge_gps">GPS Monitored Journeys</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Booking panel -->
+  <section class="booking-section" id="booking">
+    <div class="container">
+      <div class="booking-panel">
+        <div class="booking-header">
+          <div>
+            <h2 style="font-size: 24px; font-weight: 800; display:flex; align-items:center; gap:10px;">
+              <i class="fas fa-calculator text-taxi-yellow"></i>
+              <span data-translate="calc_title">Instant Fare Estimator</span>
+            </h2>
+            <p style="font-size: 13px; color: hsl(var(--color-text-gray)); margin-top:4px;"
+              data-translate="calc_subtitle">
+              Select route & car type for transparent pricing
+            </p>
+          </div>
+
+          <div class="booking-tabs" id="tripTypeTabs">
+            <div class="booking-tab active" data-type="One Way" data-translate="tab_oneway">
+              One Way Drop
+            </div>
+            <div class="booking-tab" data-type="Round Trip" data-translate="tab_round">
+              Round Trip
+            </div>
+          </div>
+        </div>
+
+        <form class="booking-form" id="bookingCalculator">
+          <div class="form-grid">
+            <!-- Pickup point -->
+            <div class="form-group">
+              <label>
+                <i class="fas fa-map-marker-alt" style="color: #10b981;"></i>
+                <span data-translate="lbl_pickup">Pickup Location</span>
+              </label>
+              <div class="input-icon-wrap">
+                <i class="fas fa-search"></i>
+                <input type="text" id="pickupInput" required placeholder="e.g. Ranchi, Jamsedpur..." class="form-input"
+                  list="pickupSuggestions">
+                <datalist id="pickupSuggestions"></datalist>
+              </div>
+            </div>
+
+            <!-- Drop point -->
+            <div class="form-group">
+              <label>
+                <i class="fas fa-map-pin" style="color: #ef4444;"></i>
+                <span data-translate="lbl_drop">Drop Destination</span>
+              </label>
+              <div class="input-icon-wrap">
+                <i class="fas fa-search"></i>
+                <input type="text" id="dropInput" required placeholder="e.g. Hazaribagh, Dhanbad..." class="form-input"
+                  list="dropSuggestions">
+                <datalist id="dropSuggestions"></datalist>
+              </div>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+              <label>
+                <i class="fas fa-calendar"></i>
+                <span data-translate="lbl_date">Pickup Date</span>
+              </label>
+              <input type="date" id="pickupDate" required class="form-input" style="padding-left: 20px;">
+            </div>
+
+            <!-- Time -->
+            <div class="form-group">
+              <label>
+                <i class="fas fa-clock"></i>
+                <span data-translate="lbl_time">Pickup Time</span>
+              </label>
+              <input type="time" id="pickupTime" required class="form-input" style="padding-left: 20px;">
+            </div>
+
+            <!-- Car Selector -->
+            <div class="form-group full-width">
+              <label>
+                <i class="fas fa-car-side"></i>
+                <span data-translate="lbl_car">Select Car Fleet Category</span>
+              </label>
+              <div class="input-icon-wrap">
+                <i class="fas fa-taxi"></i>
+                <select id="carCategory" class="form-input">
+                  <option value="sedan">Swift Dzire / Baleno (4 Seater Sedan/Hatchback)</option>
+                  <option value="suv">Ertiga / Innova (6/7 Seater Spacious MUV/SUV)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp Booking Confirmation Box -->
+          <div class="fare-estimate-box" id="fareDisplayBox">
+            <div class="fare-info">
+              <h4 data-translate="fare_lbl">
+                <i class="fab fa-whatsapp" style="color: #25d366; margin-right: 6px;"></i>
+                Book via WhatsApp
+              </h4>
+              <p style="font-size: 13px; color: hsl(var(--color-text-gray)); margin-top: 8px; line-height: 1.6;"
+                data-translate="fare_note">
+                Route select karein aur WhatsApp pe message bhejein. <br>Owner aapko fare bataayenge aur booking confirm
+                karenge!
+              </p>
+            </div>
+
+            <button type="submit" class="btn-premium btn-wa" style="padding: 16px 40px; font-size:16px;">
+              <i class="fab fa-whatsapp"></i>
+              <span data-translate="btn_confirm">Send Booking on WhatsApp</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fleet Dynamic Showcase -->
+  <section class="fleet-section">
+    <div class="container">
+      <div class="section-header">
+        <h4 class="section-subtitle" data-translate="fleet_subtitle">
+          Luxurious Fleets
+        </h4>
+        <h2 class="section-title" data-translate="fleet_title">
+          Our Premium Ride Options
+        </h2>
+      </div>
+
+      <!-- Fully Dynamic Fleet Showroom Rendering Grid -->
+      <div class="fleet-grid" id="fleetsContainer">
+        <!-- Rendered dynamically from db.getFleets() in app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Rates Search & List -->
+  <section class="routes-section" id="routes">
+    <div class="container">
+      <div class="section-header">
+        <h4 class="section-subtitle" data-translate="route_subtitle">
+          Dynamic Rate Chart
+        </h4>
+        <h2 class="section-title" data-translate="route_title">
+          Popular Routes & Fixed Fares
+        </h2>
+      </div>
+
+      <!-- Search and Filters -->
+      <div class="filter-bar">
+        <div class="search-wrap">
+          <i class="fas fa-search"></i>
+          <input type="text" id="routeSearch" placeholder="Type city (e.g. Ranchi, Jamsedpur...)" class="search-input">
+        </div>
+      </div>
+
+      <!-- Dynamic Routes Container -->
+      <div class="routes-grid" id="routesContainer">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <p style="font-size:12px; color: hsl(var(--color-text-gray)); font-style:italic;" data-translate="route_note">
+          *If your required destination is not listed above, please use the Fare Estimator or contact host directly for
+          special package pricing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Review Panel -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <h4 class="section-subtitle" data-translate="review_subtitle">
+          Client Endorsements
+        </h4>
+        <h2 class="section-title" data-translate="review_title">
+          Verified Customer Experiences
+        </h2>
+      </div>
+
+      <div class="review-slider-wrap">
+        <div class="review-slider" id="reviewsContainer">
+          <!-- Slider cards -->
+        </div>
+        <div class="slider-dots" id="sliderDots">
+          <!-- dots -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Logo and Description -->
+      <div class="footer-logo">
+        <h2 style="display:flex; align-items:center; gap:8px;">
+          <span style="color: hsl(var(--color-gold-base)); font-weight:900;">BookOTS</span>
+        </h2>
+        <p data-translate="footer_desc">Book Online Taxi Service is your elite transit network connecting major cities
+          across Bihar and Jharkhand. Premium quality, transparent rates, 24/7 service.</p>
+
+        <div class="footer-hubs">
+          <span class="hub-badge">Ranchi Hub</span>
+          <span class="hub-badge">Jamsedpur Hub</span>
+          <span class="hub-badge">Hazaribagh Hub</span>
+          <span class="hub-badge">Dhanbad Hub</span>
+          <span class="hub-badge">Patna Hub</span>
+          <span class="hub-badge">Gaya Hub</span>
+        </div>
+      </div>
+
+      <!-- Links Column -->
+      <div class="footer-col">
+        <h3 data-translate="footer_links">Site Links</h3>
+        <ul class="footer-links">
+          <li><a href="#booking"><span data-translate="calc_title">Fare Calculator</span></a></li>
+          <li><a href="#routes"><span data-translate="route_subtitle">Popular Rates Chart</span></a></li>
+          <li><a href="admin.html"><span data-translate="footer_links">Secure Admin Gate</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h3 data-translate="footer_reach">Reach Us</h3>
+        <div class="footer-contact-item">
+          <i class="fas fa-user-circle"></i>
+          <div>
+            <div style="font-size:11px; text-transform:uppercase;">Host Manager</div>
+            <div style="font-weight:700; color:#fff;" id="footerHostName">Nitish Ji</div>
+          </div>
+        </div>
+
+        <div class="footer-contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <div>
+            <div style="font-size:11px; text-transform:uppercase;">Call Details</div>
+            <div style="font-weight:700; color:#fff;"><a id="footerCallLink" href="tel:7352121002">7352121002</a></div>
+          </div>
+        </div>
+
+        <div class="footer-contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <div>
+            <div style="font-size:11px; text-transform:uppercase;">WhatsApp Support</div>
+            <div style="font-weight:700; color:#fff;"><a id="footerWaLink" href="https://wa.me/917352121002"
+                target="_blank">7352121002</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright and developer credits -->
+    <div class="container footer-bottom">
+      <p style="font-size:12px; color:hsl(var(--color-text-gray));">
+        &copy; <span id="year">2026</span> BookOTS (Book Online Taxi Service). All rights reserved.
+      </p>
+
+      <div class="credits-box">
+        <p>
+          Designed & Developed by <a href="https://xevion-byte.vercel.app/" target="_blank">Xevion Byte</a> (Contact:
+          +91 9693776982)
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Buttons -->
+  <div class="floating-actions">
+    <a id="floatCall" href="tel:7352121002" class="btn-premium action-float"
+      style="background: #2563eb; box-shadow: 0 10px 30px rgba(37,99,235,0.4);">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+    <a id="floatWa" href="https://wa.me/917352121002" target="_blank"
+      class="btn-premium btn-wa action-float animate-bounce">
+      <i class="fab fa-whatsapp" style="font-size:32px;"></i>
+    </a>
+  </div>
+
+  <!-- Main scripts -->
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+
+</html>
